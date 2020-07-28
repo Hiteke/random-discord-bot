@@ -91,7 +91,6 @@ if (!msg.content.startsWith(prefix) || msg.author.bot) return
 	if (cmd === 'timezone') msg.reply(chance.timezone())
 	if (cmd === 'weekday') msg.reply(chance.weekday())
 	if (cmd === 'year') msg.reply(chance.year())
-	if (cmd === 'year') msg.reply(chance.year())
 	//Finance
 	if (cmd === 'cc') msg.reply(chance.cc())
 	if (cmd === 'cc_type') msg.reply(chance.cc_type())
