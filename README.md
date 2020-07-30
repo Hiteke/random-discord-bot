@@ -26,7 +26,7 @@
  * ssn
  * suffix
  ### Thing
- * animal [cean, desert, grassland, forest, farm, pet, zoo]
+ * animal [ocean, desert, grassland, forest, farm, pet, zoo]
  ### Mobile
  * android_id
  * apple_token
