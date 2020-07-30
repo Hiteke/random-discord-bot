@@ -4,20 +4,77 @@ var bot=new Discord.Client()
 var prefix='.'
 bot.login('token');
 
-bot.on('message', msg => {
+function stringtobool(string) {
+	if (string === 'true') {
+		return true
+	} else return false
+}
+
+function random(args, cmd){
+try {
+	switch (cmd) {
+		//Basics
+		case 'bool':
+		if (args[0]) {
+			return chance.bool({likelihood: args[0]})
+		} else return chance.bool()
+		case 'falsy':
+		if (args[0]) {
+			return chance.falsy({pool: args})
+		} return chance.falsy();
+		case 'character':
+		if (args[0]) {
+			return chance.character({pool: args[0]})
+		} else return chance.character()
+		case 'floating':
+		if (args[0] && args[1]) {
+			return chance.floating({min: args[0], max: args[1]})
+		} else return chance.floating()
+		case 'integer':
+		if (args[0] && args[1]) {
+			return chance.integer({min: args[0], max: args[1]})
+		}
+		case 'letter':
+		if (args[0]) {
+			return chance.letter({casing: args[0]})
+		} return chance.letter()
+		case 'natural':
+		if (args[0] && args[1]) {
+			return chance.natural({ min: args[0], max: args[1] })
+		} else return chance.natural()
+		case 'prime':
+		if (args[0] && args[1]) {
+			return chance.prime({ min: args[0], max: args[1] })
+		} else return chance.prime()
+		case 'string':
+		if (args[0]) {
+			if (args[1]) {
+			return chance.string({ length: args[1] })
+		} else return chance.string({ pool: args[0] })
+		} else return chance.string()
+		//Text
+		//Person
+		//Thing
+		case 'animal':
+		if (args[0]) {
+			return chance.animal({type: args[0]})
+		} else return chance.animal()
+	}
+} catch {
+	return 'Incorrect arguments'
+}
+}
+
+bot.on('message', async msg => {
 if (!msg.content.startsWith(prefix) || msg.author.bot) return
 	var args = msg.content.slice(prefix.length).trim().split(' ').filter(item => item !== '')
 	var cmd = args.shift().toLowerCase()
-	//Basics
-	if (cmd === 'bool') msg.reply(chance.bool())
-	if (cmd === 'falsy') msg.reply(chance.falsy())
-	if (cmd === 'character') msg.reply(chance.character())
-	if (cmd === 'floating') msg.reply(chance.floating())
-	if (cmd === 'integer') msg.reply(chance.integer())
-	if (cmd === 'letter') msg.reply(chance.letter())
-	if (cmd === 'natural') msg.reply(chance.natural())
-	if (cmd === 'prime') msg.reply(chance.prime())
-	if (cmd === 'string') msg.reply(chance.string())
+
+	var result = random(args, cmd)
+	if (result.isNaN) {
+	msg.reply('Incorrect arguments')
+	} else msg.reply(result)
+
 	//Text
 	if (cmd === 'paragraph') msg.reply(chance.paragraph())
 	if (cmd === 'sentence') msg.reply(chance.sentence())
@@ -34,8 +91,6 @@ if (!msg.content.startsWith(prefix) || msg.author.bot) return
 	if (cmd === 'prefix') msg.reply(chance.prefix())
 	if (cmd === 'ssn') msg.reply(chance.ssn())
 	if (cmd === 'suffix') msg.reply(chance.suffix())
-	//Thing
-	if (cmd === 'animal') msg.reply(chance.animal())
 	//Mobile
 	if (cmd === 'android_id') msg.reply(chance.android_id())
 	if (cmd === 'apple_token') msg.reply(chance.apple_token())
