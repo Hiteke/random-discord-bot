@@ -1,109 +1,110 @@
- ###Basics
- *bool [percent]
- *falsy [pool]
- *character [pool]
- *floating [min] [max]
- *integer [min] [max]
- *letter [casing]
- *natural [min] [max]
- *prime [min] [max]
- *string [pool] [length]
- ###Text
- *paragraph 
- *sentence 
- *word 
- ###Person
- *age 
- *birthday
- *cf
- *cpf
- *first
- *gender
- *last
- *name
- *prefix
- *ssn
- *suffix
- ###Thing
- *animal [cean, desert, grassland, forest, farm, pet, zoo]
- ###Mobile
- *android_id
- *apple_token
- *bb_pin
- *wp7_anid
- *wp8_anid2
- *wp8_anid2
- ###Web
- *avatar
- *color
- *company
- *domain
- *email
- *fbid
- *google_analytics
- *hashtag
- *ip
- *ipv6
- *klout
- *profession
- *tld
- *twitter
- *url
- ###Location
- *address
- *altitude
- *areacode
- *city
- *coordinates
- *country
- *depth
- *geohash
- *latitude
- *locale
- *longitude
- *phone
- *postal
- *postcode
- *province
- *stat
- *street
- *zip
- ###Time
- *ampm
- *date
- *hammertime
- *hour
- *millisecond
- *minute
- *month
- *second
- *timestamp
- *timezone
- *weekday
- *year
- ###Finance
- *cc
- *cc_type
- *currency
- *currency_pair
- *dollar
- *euro
- *exp
- *exp_month
- *exp_year
- ###Helpers
- *capitalize
- *pad
- *pickone
- *pickset
- *shuffle
- ###Miscellaneous
- *coin
- *dice
- *guid
- *hash
- *normal
- *radio
- *tv
- ###Ping
- *ping
+ ## Commands
+ ### Basics
+ * bool [percent]
+ * falsy [pool]
+ * character [pool]
+ * floating [min] [max]
+ * integer [min] [max]
+ * letter [casing]
+ * natural [min] [max]
+ * prime [min] [max]
+ * string [pool] [length]
+ ### Text
+ * paragraph 
+ * sentence 
+ * word 
+ ### Person
+ * age 
+ * birthday
+ * cf
+ * cpf
+ * first
+ * gender
+ * last
+ * name
+ * prefix
+ * ssn
+ * suffix
+ ### Thing
+ * animal [cean, desert, grassland, forest, farm, pet, zoo]
+ ### Mobile
+ * android_id
+ * apple_token
+ * bb_pin
+ * wp7_anid
+ * wp8_anid2
+ * wp8_anid2
+ ### Web
+ * avatar
+ * color
+ * company
+ * domain
+ * email
+ * fbid
+ * google_analytics
+ * hashtag
+ * ip
+ * ipv6
+ * klout
+ * profession
+ * tld
+ * twitter
+ * url
+ ### Location
+ * address
+ * altitude
+ * areacode
+ * city
+ * coordinates
+ * country
+ * depth
+ * geohash
+ * latitude
+ * locale
+ * longitude
+ * phone
+ * postal
+ * postcode
+ * province
+ * stat
+ * street
+ * zip
+ ### Time
+ * ampm
+ * date
+ * hammertime
+ * hour
+ * millisecond
+ * minute
+ * month
+ * second
+ * timestamp
+ * timezone
+ * weekday
+ * year
+ ### Finance
+ * cc
+ * cc_type
+ * currency
+ * currency_pair
+ * dollar
+ * euro
+ * exp
+ * exp_month
+ * exp_year
+ ### Helpers
+ * capitalize
+ * pad
+ * pickone
+ * pickset
+ * shuffle
+ ### Miscellaneous
+ * coin
+ * dice
+ * guid
+ * hash
+ * normal
+ * radio
+ * tv
+ ### Ping
+ * ping
