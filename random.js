@@ -33,7 +33,7 @@ try {
 		case 'integer':
 		if (args[0] && args[1]) {
 			return chance.integer({min: args[0], max: args[1]})
-		}
+		} else return chance.integer()
 		case 'letter':
 		if (args[0]) {
 			return chance.letter({casing: args[0]})
